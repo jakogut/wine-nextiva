@@ -2,8 +2,8 @@
 # Contributor: Sidney Crestani <sidneycrestani@archlinux.net>
 # Contributor: sxe <sxxe@gmx.de>
 
-pkgname=wine-git
-pkgver=4.11.r138.g6e97461580
+pkgname=wine-nextiva
+pkgver=4.17.r1.gf614a7417c
 pkgrel=1
 pkgdesc='A compatibility layer for running Windows programs (git version)'
 arch=('i686' 'x86_64')
@@ -87,7 +87,8 @@ optdepends=(
 )
 options=('staticlibs')
 install="${pkgname}.install"
-source=('git://source.winehq.org/git/wine.git'
+source=(#'git://source.winehq.org/git/wine.git'
+	'git+https://github.com/jakogut/wine.git#branch=nextiva-communicator'
         '30-win32-aliases.conf'
         'wine-binfmt.conf')
 sha256sums=('SKIP'
